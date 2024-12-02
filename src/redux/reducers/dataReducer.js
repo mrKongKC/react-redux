@@ -1,8 +1,9 @@
 // src/redux/reducer/dataReducer.js
 // import { SET_DATA, RESET_DATA } from '../actions';
-import { SET_DATA, RESET_DATA } from '../actions/dataActions';
+import { SET_DATA, RESET_DATA } from "../actions/dataActions";
+import dataList from "../../assets/data.json";
 
-const initialState = []; // Directly initialize as an array
+const initialState = dataList; // Directly initialize as an array
 
 const dataReducer = (state = initialState, action) => {
   switch (action.type) {

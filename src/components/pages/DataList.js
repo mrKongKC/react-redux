@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setData, resetData } from '../redux/actions/dataActions';
-import { setTempData, resetTempData } from '../redux/actions/tempDataActions';
+import { setData, resetData } from '../../redux/actions/dataActions';
+import { setTempData, resetTempData } from '../../redux/actions/tempDataActions';
 
 const DataList = ({
   data,
