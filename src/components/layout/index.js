@@ -57,7 +57,7 @@ function Layout(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", overflow: "hidden" }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: "white" }}>
         <Toolbar>
@@ -134,6 +134,7 @@ function Layout(props) {
           backgroundColor: "#f8f9fa",
           width: "100%",
           height: "100dvh",
+          overflow: "scroll",
         }}
       >
         <Toolbar />
