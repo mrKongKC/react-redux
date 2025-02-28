@@ -10,7 +10,7 @@ const InputFilter = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [submitted, setSubmitted] = useState(false);
-  const allSuggestions = ["orange", "cat", "dog"];
+  const allSuggestions = ["orange", "cat", "dog","eagle"];
 
   const handleChange = (event) => {
     console.log("clicking");

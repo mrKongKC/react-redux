@@ -65,3 +65,45 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DataList);
+// explain Redux
+// step 1 Dispatch
+// dispatch will call action data
+// example dispatch with setData(data) --> In this page, I use to set new value in `data`
+// setData: (data) => dispatch(setData(data)),
+
+// step 2 Action
+// In action page
+// export const SET_DATA = 'SET_DATA';
+// export const setData = (data --> new data) => ({
+//   type: SET_DATA, --> when dispatch  `SET_DATA` will have this type
+//   payload: data, --> Payload will be the new data to store in the state
+// });
+
+// step 3 Reducer
+// import { SET_DATA, RESET_DATA } from "../actions/dataActions"; --> import action
+// import dataList from "../../assets/data.json"; 
+// const initialState = dataList; // Directly initialize as an array
+
+//explain state = initialState : is a default value which want to use
+
+// const dataReducer = (state = initialState, action) => {
+//   switch (action.type) { --> so when user use action redux will know now is which `type`
+//     case SET_DATA:
+//       return action.payload; // Just return the payload from action value
+
+//this a payload and type that this reducer will do 
+//  export const setData = (data --> new data) => ({
+//   type: SET_DATA, --> when dispatch  `SET_DATA` will have this type
+//   payload: data, --> Payload will be the new data to store in the state
+// });
+
+
+// For this case when it got a RESET_DATA will reset data to []
+//     case RESET_DATA:
+//       return []; // Reset to an empty array
+//     default:
+//       return state;
+//   }
+// };
+
+// export default dataReducer;
